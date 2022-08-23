@@ -1,0 +1,18 @@
+name: Release the package
+
+env:
+  NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
+on:
+  push:
+    branches: [ main , master]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: installs dependencies & build the project and start it
+        run: |
+          npm ci
+          npm run lint
+          npm run build
+          npm run release
