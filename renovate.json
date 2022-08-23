@@ -1,0 +1,20 @@
+{
+  "extends": [
+    "config:base"
+  ],
+  "automerge": true,
+  "automergeType": "pr",
+  "timezone": "Europe/Berlin",
+  "schedule": [
+    "after 3pm every day",
+    "before 5am every day"
+  ],
+  "prHourlyLimit": 3,
+  "prConcurrentLimit": 5,
+  "packageRules": [
+    {
+      "matchUpdateTypes": ["major"],
+      "enabled": false
+    }
+  ]
+}
