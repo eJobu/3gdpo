@@ -9,7 +9,7 @@ export async function createAsimplePayment (
   redirectUrl: string,
   reference: string,
   description: string
-): Promise<void> {
+): Promise<string> {
   const data = `
   <?xml version="1.0" encoding="utf-8"?>
 <API3G>
@@ -31,5 +31,7 @@ export async function createAsimplePayment (
     </Services>
 </API3G>
   `
-  return await dpoApi.connect(httpMethod.POST, data)
+  const paymentRequest = await dpoApi.connect(httpMethod.POST, data)
+  const parsedResponse = JSON.stringify(paymentRequest)
+  return parsedResponse
 }
