@@ -1,6 +1,6 @@
 {
-  "name": "@ejobu/3gdpo",
-  "version": "0.0.1",
+  "name": "@expensa/3gdpo",
+  "version": "0.0.2",
   "description": "A node package to interact with the open & public API provided by 3gdirectpay",
   "main": "dist/index.js",
   "scripts": {
@@ -33,5 +33,9 @@
     "eslint-plugin-node": "11.1.0",
     "eslint-plugin-promise": "5.2.0",
     "typescript": "4.7.4"
+  },
+  "types": "./dist/index.d.ts",
+  "directories": {
+    "lib": "lib"
   }
 }
