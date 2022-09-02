@@ -4,7 +4,7 @@ import { httpMethod } from 'types'
 export class Api {
   public async connect (
     method: httpMethod,
-    body?: any
+    data: any
   ): Promise<any> {
     const url = 'https://secure.3gdirectpay.com/API/V6'
     const headers = {
@@ -15,7 +15,7 @@ export class Api {
         url,
         method,
         headers,
-        data: JSON.stringify(body)
+        data
       })
       if (request.status.toString().startsWith('4') || request.status.toString().startsWith('5')) {
         console.error(`Error returned by the API: ${request.statusText}`)
