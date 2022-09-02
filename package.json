@@ -1,6 +1,6 @@
 {
   "name": "@expensa/3gdpo",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "A node package to interact with the open & public API provided by 3gdirectpay",
   "main": "dist/index.js",
   "scripts": {

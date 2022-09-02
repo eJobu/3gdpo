@@ -1,5 +1,5 @@
-import { dpoApi } from 'main'
-import { httpMethod } from 'types'
+import { dpoApi } from '../main/index'
+import { httpMethod } from '../types'
 
 export async function createAsimplePayment (
   companyToken: string,
